@@ -9,7 +9,7 @@
   <BackupDir>EzBackups/Backups</BackupDir> <!-- Relative from /U3DS/Servers/x/ -->
   <CompressLevel>Optimal</CompressLevel> <!-- CompressionLevel: Optimal, Fastest, NoCompression -->
   <BackupFolders> <!-- Relative from /U3DS/Servers/x/ -->
-    <Dir>Level/{0}</Dir> <!-- Replaces {0} with LevelName -->
+    <Dir>Level/{0}</Dir> <!-- Plugin replaces {0} with LevelName -->
     <Dir>Players/</Dir>
   </BackupFolders>
 </Config>
