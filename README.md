@@ -5,7 +5,7 @@
 <Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <BackupCopies>8</BackupCopies> <!-- Amount of zip-files per BackupFolder -->
   <MinutesBetweenBackups>180</MinutesBetweenBackups> <!-- Set to 0 to backup after every Level save. -->
-  <AtBackup>0</AtBackup> <!-- Just plugin keeping track. -->
+  <AtBackup>0</AtBackup> <!-- Ignore. Just plugin keeping track. -->
   <BackupDir>EzBackups/Backups</BackupDir> <!-- Relative from /U3DS/Servers/x/Rocket/Plugins/ -->
   <CompressLevel>Optimal</CompressLevel> <!-- CompressionLevel: Optimal, Fastest, NoCompression -->
   <BackupFolders> <!-- Relative from /U3DS/Servers/x/ -->
