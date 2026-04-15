@@ -38,9 +38,10 @@ namespace EzBackups
                 Level.onLevelLoaded += InitBackups;
             }
             Logger.Log("Serverpath:" + ServerPath);
-            Logger.Log("Backups go to:" + PluginDir);
+            Logger.Log("Backups go to:" + Path.GetFullPath(PluginDir));
             if (Configuration.Instance.MinutesBetweenBackups == 0)
             {
+                // SDG.Unturned.SaveManager.onPostSave += ;
                 try
                 {
                     if (InitializedHarmony)
