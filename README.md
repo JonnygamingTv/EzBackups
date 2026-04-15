@@ -6,7 +6,7 @@
   <BackupCopies>8</BackupCopies> <!-- Amount of zip-files per BackupFolder -->
   <MinutesBetweenBackups>180</MinutesBetweenBackups> <!-- Set to 0 to backup after every Level save. -->
   <AtBackup>0</AtBackup> <!-- Just plugin keeping track. -->
-  <BackupDir>EzBackups/Backups</BackupDir> <!-- Relative from /U3DS/Servers/x/ -->
+  <BackupDir>EzBackups/Backups</BackupDir> <!-- Relative from /U3DS/Servers/x/Rocket/Plugins/ -->
   <CompressLevel>Optimal</CompressLevel> <!-- CompressionLevel: Optimal, Fastest, NoCompression -->
   <BackupFolders> <!-- Relative from /U3DS/Servers/x/ -->
     <Dir>Level/{0}</Dir> <!-- Plugin replaces {0} with LevelName -->
