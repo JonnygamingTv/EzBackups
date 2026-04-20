@@ -36,6 +36,8 @@ namespace EzBackups
             else
             {
                 Level.onLevelLoaded += InitBackups;
+                if(Configuration.Instance.CommandsAfterLoad.Count != 0)
+                    Level.onPostLevelLoaded += DoAfterLoad;
             }
             Logger.Log("Serverpath:" + ServerPath);
             Logger.Log("Backups go to:" + Path.GetFullPath(PluginDir));
@@ -64,9 +66,19 @@ namespace EzBackups
             }
             Provider.onServerShutdown += SaveConf;
         }
+
+        private void DoAfterLoad(int level)
+        {
+            foreach (string cmd in Configuration.Instance.CommandsAfterLoad)
+            {
+                Rocket.Core.R.Commands.Execute(null, cmd);
+            }
+        }
+
         protected override void Unload()
         {
             Level.onLevelLoaded -= InitBackups;
+            Level.onPostLevelLoaded -= DoAfterLoad;
             Provider.onServerShutdown -= SaveConf;
             _timer?.Dispose();
             _timer = null;

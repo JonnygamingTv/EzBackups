@@ -14,6 +14,8 @@ namespace EzBackups
         public CompressionLevel CompressLevel;
         [XmlArrayItem(ElementName = "Dir")]
         public List<string> BackupFolders;
+        [XmlArrayItem(ElementName = "Command")]
+        public List<string> CommandsAfterLoad;
         public void LoadDefaults()
         {
             BackupCopies = 7;
@@ -24,6 +26,10 @@ namespace EzBackups
             BackupFolders = new List<string>()
             {
                 "Level/{0}", "Players/"
+            };
+            CommandsAfterLoad = new List<string>()
+            {
+                "rocket reload"
             };
         }
     }
